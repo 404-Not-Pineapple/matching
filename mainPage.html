@@ -1,0 +1,150 @@
+<!-- ログイン後最初に現れるページ-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>マッチングサイト</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="useNcmb.js"></script>
+  <script src="match.js"></script>
+  <!-- アイコン使うためのやつ -->
+  <script src="https://kit.fontawesome.com/f58a0ec02b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="page">
+    <div id="home">
+      <a href="mainPage.html" id="logo">メインページ</a><!-- <button onclick="tempo();">マッチング</button> -->
+    </div>
+    <div id="mainContent">
+      <p id="test_line"></p>
+      <div id="quickButton">
+        <!-- マッチしていないとき -->
+        <a onclick="match()" class="btn btn--yellow btn--cubic match">クイックマッチ</a>
+        <!-- マッチしていないとき -->
+        <a href="dm.html" class="btn btn--yellow btn--cubic not-match">メッセージ</a>
+        <a href="update.html" class="btn btn--yellow btn--cubic">プロフィール</a>
+        <a onclick="logout()" class="btn btn--yellow btn--cubic">ログアウト</a>
+        <!-- <a class="btn btn--blue btn--cubic" id="delete">退会</a>-->
+      </div>
+    </div>
+    <hr>
+    <div id="topic">
+      このアプリのつかいかた<br>
+      　１．新規ユーザー登録をして、プロフィールを設定！<br>
+      　２．「クイックマッチ」を押してマッチングを開始！<br>
+      　３．Dm機能を使って個人同士でコミュニケーション！<br>
+      　４．気に入った相手なら連絡先を交換しよう！
+    </div>
+    <div id="foot"><br>:<br>:</div>
+
+
+    <!-- bottom navigation -->
+    <ul class="bottom-menu">
+
+      <li>
+        <!--　↓↓項目1.-->
+        <a href="mainPage.html">
+          <!--ここに関数を入れる-->
+          <!-- home icon -->
+          <i class="fa-solid fa-house"></i></br>
+          <span class="mini-text">ホーム</span>
+        </a>
+      </li>
+
+      <li>
+        <!--　↓↓項目2.-->
+        <!-- マッチしていないとき -->
+        <!--<a href="match.html">
+            
+            <i class="fa-sharp fa-solid fa-people-pants-simple"></i></br>
+            <span class="mini-text">マッチング</span>
+          </a>-->
+
+
+        <div class="match">
+          <a href="dm.html">
+            <i class="fa-solid fa-comment"></i></br>
+            <span class="mini-text">メッセージ</span>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <!--　↓↓項目3.-->
+        <a href="favlist.html">
+          <i class="fa-sharp fa-solid fa-heart"></i></br>
+          <span class="mini-text">おきにいり</span>
+        </a>
+      </li>
+
+      <li class="menu-width-max">
+        <!-- ↓↓項目3. -->
+        <a href="update.html">
+          <!-- profile icon -->
+          <i class="fa-solid fa-address-card"></i></br>
+          <span class="mini-text">プロフィール</span>
+        </a>
+      </li>
+
+
+
+    </ul>
+  </div>
+  <script>
+    window.onload = function () {
+      var applicationKey = "b101366add9d639994615eab7abef980313249593396a053d475ad1fdc64d61e";
+      var clientKey = "9148fb43b9f68cab53ecd4c21af07ea3744a0b290373e8970c1a80bed6ca9927";
+      var ncmb = new NCMB(applicationKey, clientKey);
+      var currentUser = ncmb.User.getCurrentUser();
+      if (currentUser) {
+        if (ncmb.User.getCurrentUser().name == null) {
+          location.href = "profile.html";
+        } else {
+          var elm = document.getElementById('test_line');
+          elm.textContent += 'おかえりなさい。' + ncmb.User.getCurrentUser().name + "さん。";
+        }
+      } else {
+        alert("ログインに失敗");
+        location.href = "login.html";
+      }
+    }
+
+    function sleep(waitMsec) {
+      var startMsec = new Date();
+      while (new Date() - startMsec < waitMsec) {
+      };
+    }
+
+
+    function logout() {
+      ncmb.User.logout();
+      sleep(3000);
+      location.href = "login.html";
+    }
+
+    var btn = document.getElementById('delete');
+
+    function locate() {
+      sleep(3000);
+      location.href = "login.html";
+    }
+
+    btn.addEventListener('click', function () {
+      var result = window.confirm("退会すると今後このアカウントでログインすることはできなくなります。\n本当に退会しますか？");
+
+      if (result) {
+        let currentUser = ncmb.User.getCurrentUser();
+        currentUser.delete()
+        sleep(3000);
+        location.reload();
+      } else {
+      }
+    })
+  </script>
+</body>
+
+</html>
