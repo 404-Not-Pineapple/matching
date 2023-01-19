@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Natural Language Processing TEST</title>
+</head>
+
+<body>
+  <!--HTML-->
+  <!--関数実行用のボタン-->
+  <button id="button">ボタン</button>
+
+  <!--kuromoji.jsを使えるように参照-->
+  <script src="kuromoji.js"></script>
+
+  <script>
+    window.onload = function () {
+      //idがbuttonがクリックされたとき関数を実行
+      document.getElementById('button').addEventListener('click', NaturalLanguageProcessing);
+    }
+
+    function NaturalLanguageProcessing() {
+      //自然言語処理を行う元の文
+      var originalsentence = "私は山田太郎です。";
+      //logに表示
+      console.log("元の文：" + originalsentence);
+      //辞書がある場所へのパスをDICT_PATHに入れる
+      const DICT_PATH = "./dict";
+      //自然言語処理開始
+      kuromoji.builder({
+        //辞書へのパスを指定
+        dicPATH: DICT_PATH
+      }).build((err, tokenizer) => {
+        //変数tokensに元の文を解析したものを代入
+        //tokenizer.tokenize(文章)で形態素解析が行える
+        const tokens = tokenizer.tokenize(originalsentence);
+        //配列tokensを変数tokenに分けて繰り返し処理
+        tokens.forEach((token) => {
+          //tokenのすべてのデータを表示
+          console.log(token);
+          //tokenの品詞を表示（例：日本→名詞）
+          console.log(token.pos);
+          //tokenの基本形を表示（例：食べた→食べる）
+          console.log(token.surface_form);
+          //surface_formを用いることで動詞など活用が変わってしまう言葉を一つの言葉として要素に組み込むことができる
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>
