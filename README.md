@@ -1,1 +1,23 @@
-# matching
+各ファイルの簡易説明です。詳しい解説は各ファイルごとにコメントアウトしてあります。<br>
+dm.<br>
+dmの機能のファイルです。<br>
+favlist.<br>
+お気に入り機能のファイルです。<br>
+kuromoji.js<br>
+自然言語処理を行うライブラリです。<br>
+login.<br>
+ログイン機能のファイルです。<br>
+mainPage.html<br>
+アプリのホーム画面のファイルです。<br>
+match.js<br>
+マッチングを行うファイルです。<br>
+profile.<br>
+アプリの初回仕様時にプロフィール登録を行うファイルです。<br>
+regiter.<br>
+ユーザー登録を行うファイルです。<br>
+style.css<br>
+dm.css以外のcssをここのファイルで設定しています。<br>
+update.<br>
+プロフィールの更新を行うファイルです。<br>
+useNcmb.js<br>
+ニフクラ mobilebackendを使用するためのファイルです。<br>
