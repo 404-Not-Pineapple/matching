@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////
-var applicationKey = "b101366add9d639994615eab7abef980313249593396a053d475ad1fdc64d61e";
-var clientKey = "9148fb43b9f68cab53ecd4c21af07ea3744a0b290373e8970c1a80bed6ca9927";
+var applicationKey = "";
+var clientKey = "";
 var ncmb = new NCMB(applicationKey, clientKey);
 ////////////////////////////////ニフクラ////////////////////////////////////////////////
 function sleep(waitMsec) {
