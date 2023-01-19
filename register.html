@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>マッチングサイト</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="useNcmb.js"></script>
+    <script>  //ncmbのキーです
+    </script>
+    <script src="https://kit.fontawesome.com/f58a0ec02b.js" crossorigin="anonymous"></script>
+</head>
+    <div id="foot"><br>:<br>:</div>
+<body>
+    <script src="register.js"></script>
+    <!-- ここから下のやつログイン用のhtml-->
+  <div id="page">
+    <div id="home">
+      <div id="logo">新規ユーザー登録</div>
+      <!-- ヘッダ -->
+    </div>
+    <div class="txinput">
+        <p>ユーザーID </p> <label class="txeffect"><input type="text" id="userName" pattern="[A-Z]*"
+                title="英字のみで入力して下さい。"></label>
+    </div>
+    <div class="psinput">
+        <p>パスワード </p> <label class="pseffect"><input type="password" id="password" minlength="5"></label>
+    </div>
+      <div class="psinput">
+      <p>パスワードの確認(確認のためもう一度パスワードを入力してください) </p> <label class="pseffect"><input type="password" id="password1" minlength="5"></label>
+    </div>
+    <p>
+    <div class="checkbox">
+        <input type="checkBox" onclick="passwordCheck(this.checked)">
+        パスワードを表示する
+    </div>
+    </p>
+    <p>
+    <div class="loginba"><button onclick="signUp()">新規ユーザー登録</button></div>
+    <div class="loginba"><button onclick="login()" class="loginb">ログインはこちら</button></div>
+    </p>
+  </div>
+    <!-- ここまでログイン用のhtml -->
+
+
+  
+</body>
+
+</html>
