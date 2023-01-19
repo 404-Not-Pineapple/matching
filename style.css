@@ -1,0 +1,326 @@
+/******************
+F8EDE3
+DFD3C3
+D0B8A8
+7D6E83
+**************/
+
+
+html {
+  font-family: "メイリオ";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #fcfafa;
+}
+
+#page {
+  height: auto;
+  width: 50%;
+  background-color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0rem auto 3rem auto;
+  }
+
+#home {
+  width:100%;
+  font-size: 40px;
+  height: auto;
+}
+
+#logo {
+  font-weight: bold;
+  font-size:36px;
+  margin:auto;
+  text-decoration: none;
+  font-family: sans-serif;
+  color:#62816e;
+}
+
+hr {
+  margin:15px;
+}
+#mainContent {
+  width:auto;
+  margin: 30px;
+}
+#topic {
+  margin-bottom:60px;
+}
+#foot {
+  text-align:center;
+}
+
+@media screen and (max-width: 670px) {
+/* pxまでの幅の場合に適応される */
+  body {
+    background-color:#ffffff;
+  }
+  #page {
+    width:100%
+  }
+}
+
+@media screen and (max-height: 909px) {
+  html{
+    height:100%;
+  }
+}
+/*********ボトムメニュー*********/
+.mini-text{font-size:14px;}/*文字大きさ*/
+
+ul.bottom-menu {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:60px;/*高さ*/
+    margin:0;
+    padding:0;
+    background-color:#7ba28a;/*背景色*/
+    border-top:2px solid #62816e;/*バーの上の線*/
+    z-index:30;}
+
+ul.bottom-menu li {
+    float:left;
+    width:25%;
+    background-color:#7ba28a;/*背景色*/
+    list-style-type:none;
+    text-align:center;
+    font-size:25px;/*アイコンのサイズ*/}
+
+.bottom-menu li a {
+    display: block;
+    color:#fcfafa;/*アイコンと文字の色*/
+    padding-top:10px;
+    padding-bottom:5px;
+    line-height:10px;
+    text-decoration:none;}
+
+.bottom-menu li a:hover {
+    color:#D0B8A8;/*マウスオーバー時の色*/}
+/******************/
+
+/*****************ボタン*****************/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  width:200pt;
+  height:100px;
+  margin:5px;
+  position: relative;
+  display: inline-flex;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+a.btn--yellow {
+  color: #fff;
+  background-color: #7BA28A;
+  border-bottom:solid 5px #62816e;
+}
+
+a.btn--yellow:hover {
+  color: #fff;
+  background: #7BA28A;
+  border-bottom:solid 2px #62816e;
+}
+/*退会用ボタン*/
+a.btn--blue {
+  color: #fff;
+  background-color: #7b8aa2;
+  border-bottom:solid 5px #626e81;
+}
+
+a.btn--blue:hover {
+  color: #fff;
+  background: #7b8aa2;
+  border-bottom:solid 2px #626e81;
+}
+/**/
+#quickButton {
+  text-align: center;
+  margin: 5pt 0 5pt;
+}
+/*******************************/
+
+/**************プロフィール*****************/
+.listItem {
+  margin:8pt 0 3pt;
+  padding:0 5px;
+  background-color:#7ba28a;
+  color:#ffffff;
+}
+#name {
+  width: 160pt;
+  height: 40pt;
+  margin:0 15px;
+  font-size:1.8rem;
+}
+#gender {
+  width: 80pt;
+  height: 40pt;
+  margin:0 15px;
+  font-size:1.8rem;
+}
+#old {
+  width: 80pt;
+  height: 40pt;
+  margin:0 15px;
+  font-size:1.8rem;
+}
+#ganre {
+  margin:0 15px;
+  font-size:1.8rem;
+}
+.explolation{
+  font-size:1.6rem;
+  color:#7D6E83;
+}
+.cb {
+  margin-left:15pt;
+  width:15pt;
+  height:15pt;
+}
+#free,#message {
+  width: 100%;
+  height: 60pt;
+}
+#register,#login {
+    background: #7ba28a;
+    border-radius: 3px;
+    border-color:#62816e;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 0px;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #fcfafa;
+}
+#register:hover,#login:hover {
+    background: #fcfafa;
+    color: #7ba28a;
+}
+
+.url{
+    display: inline-block;
+    text-align: right;
+    width: 150px;
+}
+
+
+  .help_area {
+	position:relative;
+}
+.help_icon {
+	border-radius:50%;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	vertical-align:middle;
+	font-size:12px;
+	text-align:center;
+	background-color:#888888;
+	color:white;
+	cursor:pointer;
+}
+.tooltip {
+	position:absolute;
+	background-color:rgba(0,0,0,0.5);;
+	color:white;
+	border-radius:0.3em;
+	padding:0.3em;
+	margin:0.3em 0 0 1em;
+	display:none;
+}
+
+.runNoDisp {
+  display : none;
+}
+
+/* === 実行中バックグランド ================================ */
+.runBg {
+  position   : fixed;
+  overflow   : hidden;
+  top        : 0;
+  right      : 0;
+  bottom     : 0;
+  left       : 0;
+  background : rgba(255, 255, 255, 0.90);
+  z-index    : 10;
+}
+
+/* === 実行中ウインド ====================================== */
+.runBg .runWindow {
+                               /* 実行中ウインドを中心に表示 */
+  position      : absolute;
+  top           : 50%;
+  left          : 50%;
+  transform     : translate(-50%, -50%);
+  z-index       : 11;
+             /* ↓実行中ウインドウの見た目：変更してください */
+  width         : 300px;
+  background    : #fff;
+  border        : 3px solid #999;
+  border-radius : 10px;
+  font-size     : 12pt;
+  line-height   : 1.2;
+  text-align    : center;
+}
+
+/* === 実行中バーのエリア ================================== */
+.runBg .runWindow .bar {
+  width         : 80%;
+  margin        : 10px auto;
+  overflow      : hidden;
+  border        : 1px solid rgba(123, 162, 138, 0.91);
+}
+
+/* === 実行中ウインド：アニメーション ====================== */
+.runBg .runWindow .bar::before {
+  display       : block;
+  content       : "";
+  height        : 20px;
+  color         : #fff;
+  background    : linear-gradient(90deg, #ffffff, rgba(123, 162, 138, 0.91));
+  animation     : runOpenAnime 5s linear infinite;
+}
+@keyframes runOpenAnime {
+   0% { transform  :translateX(-100%) }
+ 100% { transform  :translateX(100%)  }
+}
+
+</style>
