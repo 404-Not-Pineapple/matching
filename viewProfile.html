@@ -1,0 +1,105 @@
+<!-- ユーザ登録後最初に現れるページ。プロフィール登録の項目他に何かあればおしえて-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>マッチングサイト</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="useNcmb.js"></script>
+  <script src="profile.js"></script>
+  <script src="https://kit.fontawesome.com/f58a0ec02b.js" crossorigin="anonymous"></script>
+  <script src="./kuromoji.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <div id="home">
+      <a href="mainPage.html" id="logo">プロフィール登録</a>
+      <!-- ロゴとか。。。？ -->
+    </div>
+
+    <div class="listItem">ユーザネーム</div>
+    <input type="text" id="name"></input>
+
+    <div class="listItem">性別</div>
+    <select type="text" id="gender">
+      <option hidden><span class="hidden">選択してください</span></option>
+      <option value="m">男性</option>
+      <option value="w">女性</option>
+      <option value="o">その他</option>
+    </select>
+
+    <div class="listItem">年齢</div>
+    <input type="number" id="old"></input>
+
+    <div class="listItem">興味のある分野(3つ以上選択してください)</div>
+    <div id="ganre"><tt>
+    <input type="checkbox" id="ganreA" name="ganre" class="cb"><label for="ganreA">旅行</label>
+    <input type="checkbox" id="ganreB" name="ganre" class="cb"><label for="ganreB">アウトドア</label>
+    <input type="checkbox" id="ganreC" name="ganre" class="cb"><label for="ganreC">インドア</label><br>
+    <input type="checkbox" id="ganreD" name="ganre" class="cb"><label for="ganreD">スポーツ</label>
+    <input type="checkbox" id="ganreE" name="ganre" class="cb"><label for="ganreE">音楽</label>
+    <input type="checkbox" id="ganreF" name="ganre" class="cb"><label for="ganreF">演劇</label>
+    <input type="checkbox" id="ganreG" name="ganre" class="cb"><label for="ganreG">ダンス</label><br>
+    <input type="checkbox" id="ganreH" name="ganre" class="cb"><label for="ganreH">創作</label>
+    <input type="checkbox" id="ganreI" name="ganre" class="cb"><label for="ganreI">ゲーム</label>
+    <input type="checkbox" id="ganreJ" name="ganre" class="cb"><label for="ganreJ">デジタル系</label>
+    <input type="checkbox" id="ganreK" name="ganre" class="cb"><label for="ganreK">飲食</label><br>
+    <div class="explolation">
+    その他興味のある分野を"ひらがな"で入力してください。<br>
+    (複数登録する場合は間に半角のカンマを入力してください。)<br>
+    例ぺっと,やきゅう,せいじ<br>
+    </div>
+    <textarea id="ganref" name="ganre"></textarea>
+    </tt>
+    </div>
+      
+    <div class="listItem">自己紹介</div>
+    <textarea class="cancelEnter" id="free" name="free"></textarea><br>
+    <div id="foot"><br>:<br>:</div>
+
+    <ul class="bottom-menu">
+      <li>
+        <!--　↓↓項目1.-->
+        <a href="mainPage.html">
+          <!--ここに関数を入れる-->
+          <!-- home icon -->
+          <i class="fa-solid fa-house"></i></br>
+          <span class="mini-text">ホーム</span>
+        </a>
+      </li>
+
+      <li>
+        <!--　↓↓項目2.-->
+        <a href="dm.html">
+          <!-- chat icon -->
+          <i class="fa-solid fa-comment"></i></br>
+          <span class="mini-text">メッセージ</span>
+        </a>
+      </li>
+
+      <li>
+        <!--　↓↓項目3.-->
+        <a href="favlist.html">
+          <!-- heart icon -->
+          <i class="fa-sharp fa-solid fa-heart"></i></br>
+          <span class="mini-text">おきにいり</span>
+        </a>
+      </li>
+
+      <li class="menu-width-max">
+        <!-- ↓↓項目3. -->
+        <a href="update.html">
+          <!-- profile icon -->
+          <i class="fa-solid fa-address-card"></i></br>
+          <span class="mini-text">プロフィール</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</body>
+
+</html>
