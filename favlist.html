@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>マッチングサイト</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--<link href="dm.css" rel="stylesheet" type="text/css" /> -->
+  <script src="useNcmb.js"></script>
+  <script src="https://kit.fontawesome.com/f58a0ec02b.js" crossorigin="anonymous"></script>
+  <script src="favlist.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <div id="home">
+      <a href="mainPage.html" id="logo">お気に入りリスト</a>
+      <!-- ヘッダ -->
+    </div>
+
+
+    <button onclick="karent();">あなたは</button>
+
+    <button onclick="view();">見る</button>
+
+    <div id="content"></div>
+
+    <div id="foot"><br>:<br>:</div>
+
+
+
+    <!-- bottom navigation -->
+    <ul class="bottom-menu">
+
+      <li>
+        <!--　↓↓項目1.-->
+        <a href="mainPage.html">
+          <!--ここに関数を入れる-->
+          <!-- home icon -->
+          <i class="fa-solid fa-house"></i></br>
+          <span class="mini-text">ホーム</span>
+        </a>
+      </li>
+
+      <li>
+        <!--　↓↓項目2.-->
+        <a href="dm.html">
+          <!-- chat icon -->
+          <i class="fa-solid fa-comment"></i></br>
+          <span class="mini-text">メッセージ</span>
+        </a>
+      </li>
+
+      <li>
+        <!--　↓↓項目3.-->
+        <a href="favlist.html">
+          <!-- heart icon -->
+          <i class="fa-sharp fa-solid fa-heart"></i></br>
+          <span class="mini-text">おきにいり</span>
+        </a>
+      </li>
+
+      <li class="menu-width-max">
+        <!-- ↓↓項目3. -->
+        <a href="update.html">
+          <!-- profile icon -->
+          <i class="fa-solid fa-address-card"></i></br>
+          <span class="mini-text">プロフィール</span>
+        </a>
+      </li>
+
+
+
+    </ul>
+  </div>
+</body>
+
+</html>
