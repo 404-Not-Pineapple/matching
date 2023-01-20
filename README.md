@@ -5,10 +5,10 @@ favlist.<br>
 お気に入り機能のファイルです。<br>
 kuromoji.js<br>
 自然言語処理を行うライブラリです。<br>
-login.<br>
-ログイン機能のファイルです。<br>
+login.html<br>
+ログイン画面です。login.jsを呼び出してニフクラのログイン機能を使用しログインします。<br>
 mainPage.html<br>
-アプリのホーム画面のファイルです。<br>
+アプリのホーム画面です。<br>
 match.js<br>
 マッチングを行うファイルです。<br>
 profile.<br>
