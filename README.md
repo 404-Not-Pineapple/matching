@@ -7,4 +7,5 @@ NLPtest.html<br>
  <br>
 dict＆kuromoji.js<br>
 自然言語処理を行うためのフォルダとライブラリです。<br>
-<a href= "https://github.com/takuyaa/kuromoji.js/" >kurmoji.js</a>からダウンロードが可能です。
+<a href= "https://github.com/takuyaa/kuromoji.js/" >kurmoji.js</a>からダウンロードが可能です。<br>
+Node.jsをインストールした環境でないと正しく動作しません。
